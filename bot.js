@@ -7,7 +7,7 @@ client.on('guildMemberAdd', mem => {
 
 setTimeout(function () {
         
-if(mem.guild.channels.get('551057668585029632').send("** ___ الشيخ فهمي يرحب بك في السيرفر ___**"));
+if(mem.guild.channels.get('551057668585029632').send("**Welcome To Determind Community ,_,**"));
 }, 3000);
 })
 
