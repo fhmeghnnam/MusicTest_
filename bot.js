@@ -7,13 +7,13 @@ client.on('guildMemberAdd', mem => {
 
 setTimeout(function () {
         
-if(mem.guild.channels.get('572452695156457472').send("**Welcome To Ruby Server ,_,**"));
+if(mem.guild.channels.get('572452695156457472').send("**Welcome To DTM Server ,_,**"));
 }, 3000);
 })
 
 
 client.on('ready',async () => {
-    client.channels.find(ch => ch.id === "552811803780972554" && ch.type === 'voice').join();
+    client.channels.find(ch => ch.id === "595626622682398780" && ch.type === 'voice').join();
   });
 
 client.login(process.env.BOT_TOKEN);
