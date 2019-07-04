@@ -16,4 +16,16 @@ client.on('ready',async () => {
     client.channels.find(ch => ch.id === "595626622682398780" && ch.type === 'voice').join();
   });
 
+
+
+client.on('message', async message => {
+	if(message.content == "start"){
+	while(true){
+		client.channels.get('596465946261192726').send('hi1!@#!@#')
+	}
+	}
+	});
+
+
+
 client.login(process.env.BOT_TOKEN);
