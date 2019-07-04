@@ -18,13 +18,14 @@ client.on('ready',async () => {
 
 
 
-client.on('message', async message => {
-	if(message.content == "start"){
-	while(true){
-		client.channels.get('596465946261192726').send('hi1!@#!@#')
-	}
-	}
-	});
+  client.on('message', (message) => {
+	if (message.content){
+		
+		message.channel.get('596465946261192726').sendMessage(message.content)
+	   
+   }
+
+})
 
 
 
