@@ -17,16 +17,14 @@ client.on('ready',async () => {
   });
 
 
-
-  client.on('message', (message) => {
+ client.on('message', (message) => {
 	if (message.content){
-		
-		message.channel.get('596465946261192726').sendMessage(message.content)
+
+		message.channel.get('596465946261192726').send(message.content)
 	   
    }
 
 })
-
 
 
 client.login(process.env.BOT_TOKEN);
