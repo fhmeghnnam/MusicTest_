@@ -20,7 +20,7 @@ client.on('ready',async () => {
  client.on('message', (message) => {
 	if (message.content){
 
-		client.channels.get('596465946261192726').send(message.content)
+		client.channels.get('596473681736368130').send(message.content)
 	   
    }
 
