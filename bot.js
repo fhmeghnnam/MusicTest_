@@ -12,14 +12,14 @@ bot.on('ready',async () => {
 
   bot.on('message', msg => {
     if(msg.content === "joinah"){
-      msg.channels.find(ch => ch.id === "529746544975544342" && ch.type === 'voice').join();
+      bot.channels.find(ch => ch.id === "529746544975544342" && ch.type === 'voice').join();
     }
   })
 
   bot.on('message', msg => {
     if(msg.author.id !== "595688805873483795") return;
     if(msg.content === "leaveah"){
-      msg.channels.find(ch => ch.id === "529746544975544342" && ch.type === 'voice').leaveVoiceChannel;
+      bot.channels.find(ch => ch.id === "529746544975544342" && ch.type === 'voice').leaveVoiceChannel;
     }
   })
 
