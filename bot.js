@@ -15,7 +15,7 @@ const prefix = "$"; //تعريف البرفك
   })
 
 
-client.on('ready',async () => {
+bot.on('ready',async () => {
   client.channels.find(ch => ch.id === "529746544975544342" && ch.type === 'voice').join();
 });
 
