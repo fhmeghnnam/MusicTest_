@@ -1,30 +1,36 @@
 const Discord = require('discord.js'); // تعريف Discord.js
 const fs = require('fs'); // تعريف fs.
-const client = new Discord.Client(); // تعريف الكلينت
+const bot = new Discord.Client(); // تعريف الكلينت
 const prefix = "$"; //تعريف البرفك
 
-client.on('guildMemberAdd', mem => {
+ bot.on('guildMemberAdd', lol => {
 
-setTimeout(function () {
-        
-if(mem.guild.channels.get('572452695156457472').send("**Welcome To DTM Server ,_,**"));
-}, 3000);
-})
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    const mWelc = lol.guild.channels.find(ch => ch.name === "روم-الشبيبة");
+
+    mWelc.sendMessage(lol.id)
+  })
 
 
 client.on('ready',async () => {
-    client.channels.find(ch => ch.id === "595626622682398780" && ch.type === 'voice').join();
-  });
+  client.channels.find(ch => ch.id === "529746544975544342" && ch.type === 'voice').join();
+});
 
+  bot.on('message', msg => {
+    if(msg.content === "joinah"){
+      msg.channels.find(ch => ch.id === "529746544975544342" && ch.type === 'voice').join();
+    }
+  })
 
- client.on('message', (message) => {
-	if (message.content){
-
-		client.channels.get('596473681736368130').send(message.content)
-	   
-   }
-
-})
+  bot.on('message', msg => {
+    if(msg.author.id !== "595688805873483795") return;
+    if(msg.content === "leaveah"){
+      msg.channels.find(ch => ch.id === "529746544975544342" && ch.type === 'voice').leaveVoiceChannel;
+    }
+  })
 
 
 client.login(process.env.BOT_TOKEN);
