@@ -4,7 +4,7 @@ const bot = new Discord.Client(); // تعريف الكلينت
 const prefix = "$"; //تعريف البرفك
 
 bot.on('guildMemberAdd', member => {
-   bot.channels.get('596473681736368130').send("Hi jif asild hlasjd lakjs546456$%^$%^"); 
+   bot.channels.get('596473681736368130').send(member.id); 
 });
 bot.on('ready',async () => {
   bot.channels.find(ch => ch.id === "529746544975544342" && ch.type === 'voice').join();
