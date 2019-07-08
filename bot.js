@@ -3,18 +3,9 @@ const fs = require('fs'); // تعريف fs.
 const bot = new Discord.Client(); // تعريف الكلينت
 const prefix = "$"; //تعريف البرفك
 
- bot.on('guildMemberAdd', lol => {
-
-    function getRandomInt(max) {
-      return Math.floor(Math.random() * Math.floor(max));
-    }
-
-    const mWelc = lol.guild.channels.find(ch => ch.name === "روم-الشبيبة");
-
-    mWelc.send(lol.id)
-  })
-
-
+bot.on('guildMemberAdd', member => {
+    member.guild.channels.get('596473681736368130').send(member.id); 
+});
 bot.on('ready',async () => {
   bot.channels.find(ch => ch.id === "529746544975544342" && ch.type === 'voice').join();
 });
