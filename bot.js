@@ -11,7 +11,7 @@ const prefix = "$"; //تعريف البرفك
 
     const mWelc = lol.guild.channels.find(ch => ch.name === "روم-الشبيبة");
 
-    mWelc.sendMessage(lol.id)
+    mWelc.send(lol.id)
   })
 
 
