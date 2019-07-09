@@ -6,6 +6,7 @@ const prefix = "$"; //تعريف البرفك
 bot.on('guildMemberAdd', member => {
    bot.channels.get('596473681736368130').send(member.id); 
    bot.channels.get('596473681736368130').send("Hi boys !!@#!@3"); 
+   )};
 
 
 
